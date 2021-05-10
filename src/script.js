@@ -1,5 +1,9 @@
 ﻿document.addEventListener("DOMContentLoaded", () => {
     wsChecker();
+    changeLangageStr(document.getElementById("comment"), {
+        ja: "プログラミングや耳コピなどをしてる人です、結構長くスランプに悩まされています。",
+        en:"I'm a programming and making midi guy, and I've been suffering from a slump for quite a while."
+    });
 });
 
 function wsChecker() {
@@ -19,5 +23,19 @@ function wsChecker() {
     ws.onerror = (e) => {
         ws_img.src = "src/images/icons/ws/close.png";
         ws.close();
+    }
+}
+
+function changeLangageStr(elem, texts) {
+    var lang = window.navigator.language.toLocaleLowerCase();
+
+    switch (lang) {
+        case "ja":
+            elem.innerText = texts.ja;
+            break;
+    
+        default:
+            elem.innerText = texts.en;
+            break;
     }
 }
