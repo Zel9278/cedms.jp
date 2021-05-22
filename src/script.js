@@ -2,6 +2,7 @@
     wsChecker();
     changeLangageStr(document.getElementById("comment"), {
         ja: "プログラミングや耳コピなどをしてる人です、結構長くスランプに悩まされています。",
+        sus_ja: "プロゲうシソゲや耳コピなどをレてゑ人てず、结构长ㄑヌうソプに悩まされていまず。",
         en:"I'm a programming and making midi guy, and I've been suffering from a slump for quite a while."
     });
 });
@@ -31,6 +32,7 @@ function changeLangageStr(elem, texts) {
 
     switch (lang) {
         case "ja":
+            if(texts.sus_ja && `${(new Date().getMonth()+1)}/${new Date().getDate()}` === "4/1") return elem.innerText = texts.sus_ja;
             elem.innerText = texts.ja;
             break;
     
