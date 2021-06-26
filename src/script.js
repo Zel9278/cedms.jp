@@ -52,7 +52,3 @@ function getBirthday(data) {
 
     return (today < thisYearBirthday) ? age-1 : age;
 }
-
-/*
-webhook test
-*/
