@@ -1,5 +1,4 @@
 ﻿document.addEventListener("DOMContentLoaded", () => {
-    wsChecker();
     changeLangageStr(document.getElementById("comment"), {
         ja: "プログラミングや耳コピなどをしてる人です、結構長くスランプに悩まされています。",
         sus_ja: "プロゲうシソゲや耳コピなどをレてゑ人てず、结构长ㄑヌうソプに悩まされていまず。",
@@ -7,26 +6,6 @@
     });
     document.getElementById("age").innerText = getBirthday("2003/4/25");
 });
-
-function wsChecker() {
-    const ws = new WebSocket("wss://mpp.cedms.jp:8443");
-    const ws_img = document.getElementById("ws");
-    ws_img.src = "src/images/icons/ws/wait.png";
-    ws.onopen = (e) => {
-        ws_img.src = "src/images/icons/ws/check.png";
-    }    
-    ws.onclose = (e) => {
-        ws_img.src = "src/images/icons/ws/close.png";
-        console.warn("websocket has been disconnected for some reason, will reconnect in a second...");
-        setTimeout(() => {
-            wsChecker();
-        }, 1000);
-    }
-    ws.onerror = (e) => {
-        ws_img.src = "src/images/icons/ws/close.png";
-        ws.close();
-    }
-}
 
 function changeLangageStr(elem, texts) {
     var lang = window.navigator.language.toLocaleLowerCase();
