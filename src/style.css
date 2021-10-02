@@ -50,12 +50,6 @@ details[open] summary ~ * {
   margin-left: 1em;
 }
 
-.info {
-  display: block;
-  margin-left: auto;
-  margin-right: auto
-}
-
 .info div {
   margin-top: 24px;
 }
@@ -119,6 +113,11 @@ details[open] summary ~ * {
   position: fixed;
   left: 0;
   bottom: 0;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @keyframes sweep {
