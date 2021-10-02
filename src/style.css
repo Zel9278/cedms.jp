@@ -9,7 +9,9 @@
 
 .menu ul {
   list-style-type: none;
-  margin: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0;
   overflow: hidden;
 }
@@ -46,6 +48,12 @@
 details[open] summary ~ * {
   animation: sweep .2s ease-out;
   margin-left: 1em;
+}
+
+.info {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
 }
 
 .info div {
