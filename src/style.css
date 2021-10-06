@@ -50,6 +50,10 @@ details[open] summary ~ * {
   margin-left: 1em;
 }
 
+details summary::-webkit-details-marker {
+  display:none;
+}
+
 .info div {
   margin-top: 24px;
 }
