@@ -50,10 +50,6 @@ details[open] summary ~ * {
   margin-left: 1em;
 }
 
-details summary::-webkit-details-marker {
-  display:none;
-}
-
 .info div {
   margin-top: 24px;
 }
@@ -107,6 +103,8 @@ details summary::-webkit-details-marker {
   -khtml-user-select: none;
   -webkit-user-select: none;
   -webkit-touch-callout: none;
+
+  position: relative;
 }
 
 #accounts summary:first-of-type {
