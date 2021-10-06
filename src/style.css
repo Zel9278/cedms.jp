@@ -97,7 +97,7 @@ details[open] summary ~ * {
   font-size: 13px;
 }
 
-#accounts {
+#links {
   -moz-user-select: none;
   -ms-user-select: none;
   -khtml-user-select: none;
@@ -107,7 +107,7 @@ details[open] summary ~ * {
   position: relative;
 }
 
-#accounts summary:first-of-type {
+#links summary:first-of-type {
   list-style-type: none;
 }
 
